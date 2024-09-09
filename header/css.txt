@@ -1,0 +1,119 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fff;
+    
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 50px;
+    margin-top: 20px;
+}
+
+
+.top-menu {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-menu a{
+    text-decoration: none;
+    color: black;
+}
+
+.top-menu span {
+    font-size: 24px;
+    font-family: Inter;
+}
+
+.search-container{
+    margin-left: 140px;
+    display: table;
+}
+
+.search-child{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.search-bar {
+    width: 300px;
+    padding: 8px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+}
+
+.search-icon {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    align-self: center;
+    margin-left: 10px;
+}
+
+.menu-items {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    margin-top: 10px;
+}
+
+.menu-items a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: black;
+    font-family: Inter;
+}
+
+.login-area {
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+}
+
+.login-area a {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    margin: 0 10px;
+    width: 40px;
+}
+
+.login-area img {
+    width: 28px;
+    height: 28px;
+    margin-bottom: 4px; 
+}
+
+.login-area span {
+    font-size: medium;
+}
+
+
+.page-name{
+    text-align: center;
+    font-size: 300%;
+    font-weight: 100;
+    font-family: Inter;
+    color: gray;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.current-location{
+    text-align: center;
+    font-weight: 100;
+    font-family: Inter;
+    color: gray;
+    margin-top: 0;
+}

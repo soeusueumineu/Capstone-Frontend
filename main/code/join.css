@@ -1,0 +1,354 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fff;
+    
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 50px;
+    margin-top: 20px;
+}
+
+.top-menu {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-menu a{
+    text-decoration: none;
+    color: black;
+}
+
+.top-menu span {
+    font-size: 24px;
+    font-family: Inter;
+}
+
+.search-container{
+    margin-left: 140px;
+    display: table;
+}
+
+.search-child{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.search-bar {
+    width: 300px;
+    padding: 8px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+}
+
+.search-icon {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    align-self: center;
+    margin-left: 10px;
+}
+
+.menu-items {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    margin-top: 10px;
+}
+
+.menu-items a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: black;
+    font-family: Inter;
+}
+
+.login-area {
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+}
+
+.login-area a {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    margin: 0 10px;
+    width: 40px;
+}
+
+.login-area img {
+    width: 28px;
+    height: 28px;
+    margin-bottom: 4px; 
+}
+
+.login-area span {
+    font-size: medium;
+}
+
+
+.page-name{
+    text-align: center;
+    font-size: 300%;
+    font-weight: 100;
+    font-family: Inter;
+    color: gray;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.current-location{
+    text-align: center;
+    font-weight: 100;
+    font-family: Inter;
+    color: gray;
+    margin-top: 0;
+}
+
+/* 페이지 이름 스타일 */
+.page-name {
+    text-align: center;
+    font-size: 300%;
+    font-weight: 100;
+    font-family: Inter;
+    color: gray;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* 테이블 및 관련 요소 */
+.joinmember {
+    text-align: center;
+}
+
+div.create {
+    width: 100%; 
+    text-align: center;
+    padding: 30px;
+    border-bottom: 1px solid black; 
+    margin: auto;
+    display: flex; /* 플렉스 레이아웃 적용 */
+    justify-content: center; /* 중앙 정렬 */
+    align-items: center; /* 수직 정렬 */
+}
+
+table {
+    height: 300px;
+    width: 900px; 
+    border-top: 3px solid black;
+    margin: 0 auto;
+}
+
+td {
+    border-bottom: 1px dotted black;
+}
+
+.redstar {
+    color: red;
+}
+
+.col1 {
+    width: 200px;
+    background-color: #e8e8e8;
+    padding: 10px;
+    text-align: right;
+    font-weight: bold;
+    font-size: 0.8em;
+}
+
+.col2 {
+    text-align: left;
+    padding: 10px;
+}
+
+.but2 {
+    height: 27px;
+    width: 120px;
+    color: white;
+    background-color: black;
+    border-color: black;
+}
+
+.but3 {
+    height: 35px;
+    width: 150px;
+    background-color: white;
+    border: 2px solid black;
+}
+
+.but4 {
+    height: 35px;
+    width: 150px;
+    background-color: black;
+    color: white;
+    border: 2px solid black;
+    
+}
+
+.info_1 {
+    font-size: 16px;
+}
+.info_2 {
+    font-size: 12px;
+    color: gray;
+}
+footer {
+    flex-direction: row;
+    padding: 20px;
+}
+.footer-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.footer-Customer-Service {
+    width: 200px;
+    height: 80px;
+    position: absolute;
+    margin-top: 10px;
+    left: 12%;
+}
+.footer-button-box {
+    cursor: pointer;
+    width: 220px;
+    height: 55px;
+}
+.footer-button-box a{
+    text-decoration: none;
+}
+.footer-button-box a img {
+    width: 93px;
+    height: 42px;
+    padding: 5px;
+}
+
+
+/* 스페이서 */
+.spacer1 {
+    height: 60px; 
+}
+
+.spacer2 {
+    height: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* 미디어 쿼리 - 768px 이하 */
+@media (max-width: 768px) {
+    header {
+        display: none;
+    }
+
+    /* 테이블 구조 숨기기 */
+    .usertable {
+        display: block; /* 테이블 구조를 숨김 */
+        border: none;
+    }
+    .usertable td {
+        border: none;
+    }
+    .col1 {
+        display: none;
+    }
+    .a {
+        display: none;
+    }
+    #optmailid {
+        display: none;
+    }
+    #selectcom {
+        display: none;
+    }
+    .but2 {
+        display: none;
+    }
+   
+    #email, #myname, #pwd, #pwdCheck {
+        display: block; /* 블록 레이아웃 */
+        width: 270%; /* 전체 너비 */
+        padding: 10px; /* 패딩 */
+        margin-bottom: 20px ;
+    }
+
+    /* 버튼의 위치와 크기 조정 */
+    .create {
+        display: flex; /* 플렉스 레이아웃 */
+        justify-content: center; /* 중앙 정렬 */
+        padding: 10px;
+
+    }
+    .agreement-table {
+        margin-top: 150px;
+    }
+
+    .but3, .but4 {
+        width: 100px; /* 버튼의 고정된 너비 */
+        flex: none; /* 플렉스 사용 안 함 */
+        margin: 0 10px; /* 좌우 간격 */
+    }
+
+    /* 팝업의 수직 스크롤 활성화 */
+    #popup1 {
+        overflow-y: auto; /* 수직 스크롤 가능하게 설정 */
+        max-height: 80vh; /* 화면 높이의 80%까지만 사용 */
+    }
+
+    .footer-info {
+        display: none;
+    }
+}
+
+
+
+
+/* 미디어 쿼리 - 1024px 이상 */
+@media (min-width: 1024px) {
+    body {
+        font-size: 100%; /* 폰트 크기 정상화 */
+    }
+
+    .top-menu {
+        justify-content: space-between;
+    }
+
+    .menu-items {
+        flex-direction: row; 
+        padding: 15px;
+    }
+
+    .table {
+        width: 80%; 
+        margin: auto;
+    }
+
+    .col1 {
+        width: 25%; 
+    }
+
+    .col2 {
+        width: 75%; 
+    }
+}
+ 

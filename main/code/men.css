@@ -1,0 +1,379 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fff;
+    
+}
+body {
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 50px;
+    margin-top: 20px;
+}
+
+.top-menu {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-menu a{
+    text-decoration: none;
+    color: black;
+}
+
+.top-menu span {
+    font-size: 24px;
+    font-family: Inter;
+}
+
+.search-container{
+    margin-left: 140px;
+    display: table;
+}
+
+.search-child{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.search-bar {
+    width: 300px;
+    padding: 8px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+}
+
+.search-icon {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    align-self: center;
+    margin-left: 10px;
+}
+
+.menu-items {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    margin-top: 10px;
+}
+
+.menu-items a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: black;
+    font-family: Inter;
+}
+
+.login-area {
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+}
+
+.login-area a {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    margin: 0 10px;
+    width: 40px;
+}
+
+.login-area img {
+    width: 28px;
+    height: 28px;
+    margin-bottom: 4px; 
+}
+
+.login-area span {
+    font-size: medium;
+}
+
+
+.page-name{
+    text-align: center;
+    font-size: 300%;
+    font-weight: 100;
+    font-family: Inter;
+    color: gray;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.current-location{
+    text-align: center;
+    font-weight: 100;
+    font-family: Inter;
+    color: gray;
+    margin-top: 0;
+}
+
+
+.product {
+    width: 200px;
+    height: 270px;
+}
+
+.ad {
+    width: 1200px;
+    height: 500px
+}
+
+h1 {
+    text-align: center;
+}
+/**/
+
+/*----------------------------------버튼*/
+
+/* 페이지네이션 컨테이너 */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* 페이지네이션과 상품 리스트 사이의 간격 조정 */
+}
+
+/* 페이지네이션 버튼 */
+.pagination button {
+    margin: 0 5px; /* 버튼 사이의 간격 조정 */
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+}
+
+/* 활성화된 페이지 버튼 */
+.pagination button.active {
+    background-color: #333;
+    color: #fff;
+}
+
+/*----------------------------------버튼*/
+
+
+
+
+
+
+.thumbnail_list ul#productList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+
+
+.thumbnail_list ul#productList li {
+    /* display: inline-block; */
+    /* margin-right: 20px; 각 항목 사이의 간격을 조정할 수 있습니다 */
+    /* vertical-align: top; 세로 정렬을 맞추기 위해 상단 정렬로 설정합니다 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100%/6-10px);
+    margin-bottom: 20px;
+}
+
+
+
+/* Custom styles */
+.thumbnail_list ul li .producta {
+    font-family: "ProximaNova-Regular", "Noto Sans KR";
+    color: #000;
+    text-decoration: none;
+}
+.productimg {
+    width: 224px;
+    height: 316px;
+}
+.producta, .productimg, input, button, select, textarea {
+    vertical-align: middle;
+}
+
+.producta {
+    background-color: transparent;
+}
+
+div {
+    min-width: 224px
+}
+.brand, .price {
+    font-weight: bold;
+}
+
+.manual {
+    white-space: normal; /* 텍스트가 줄바꿈되도록 설정합니다. */
+    max-width: 224px; /* 최대 가로 너비를 224px로 설정합니다. */
+    text-align: left;
+    text-decoration: #777777;
+    display: inline-block; /* 텍스트의 실제 너비를 계산할 수 있도록 설정합니다. */
+    word-wrap: break-word; /* 텍스트가 넘칠 경우 줄바꿈되도록 설정합니다. */
+}
+
+
+
+/* User agent styles */
+.producta:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: underline;
+}
+ 
+
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+/* User agent styles */
+.producta:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+li, dl {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+ul {
+    list-style-type: disc;
+}
+
+.manual {
+    white-space: pre-wrap; /* 줄바꿈을 허용합니다. */
+}
+
+
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+.heart {
+
+    width: 18px;
+    height: 17px;
+   
+    background-image: url("image/likebefore.png");
+    background-size: contain;
+    background-color: rgba(0, 0, 0, 0);
+    background-repeat: no-repeat;
+    border: none;
+    position: absolute; /* 버튼을 절대 위치로 설정 */
+    top: 10px; /* 이미지의 위쪽에 배치 */
+    right: 10px; /* 이미지의 오른쪽에 배치 */
+    /* z-index: 10; Ensure button is above the image */
+    cursor: pointer; /* Change cursor to pointer when hovering over the button */
+}
+
+.heart.clicked {
+    width: 18px;
+    height: 17px;
+   
+    background-image: url("image/likeafter.png");
+    background-size: contain;
+    background-color: rgba(0, 0, 0, 0);
+    background-repeat: no-repeat;
+    border: none;
+}
+
+.spacer {
+    height: 20px; /* 원하는 높이로 조정 가능 */
+}
+
+.spacer1 {
+    height: 10px;
+}
+
+.trend {
+    display: flex;
+    justify-content: center;
+
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+    .thumbnail_list ul#productList li {
+        width: 48%; /* 작은 화면에서는 두 개씩 나타나도록 설정합니다. */
+    }
+}
+
+
+
+
+
+/**/
+
+.info_1{
+    font-size: 16px;
+}
+.info_2{
+    font-size: 12px;
+    color: grey;
+}
+footer {
+    flex-direction: row;
+    padding: 20px
+
+}
+
+.footer-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+}
+
+.footer-Customer-Service{
+    width: 200px;
+    height: 80px;
+    position: absolute;
+    margin-top: 10px;
+    left: 12%;
+}
+
+.footer-button-box{
+    cursor: pointer;
+    width: 220px;
+    height: 55px;
+}
+
+.footer-button-box  a{
+    text-decoration: none;
+}
+
+.footer-button-box  a  img{
+    width: 93px;
+    height: 42px;
+    padding: 5px;
+}
+

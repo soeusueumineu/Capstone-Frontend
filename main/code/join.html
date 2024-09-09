@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <link rel="stylesheet" href="join.css"> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <header>
+        <div class="top-menu">
+            <a href="main.html" class="login-link">
+                <img src="site_logo_clear.png" alt="sitename">
+            </a>
+            <div class="search-container">
+                <div class="search-child">
+                    <input type="search" placeholder="Search..." class="search-bar">
+                </div>
+                <div class="search-child">
+                    <img src="search_icon.png" alt="Search" class="search-icon">
+                </div>
+            </div>
+            <div class="login-area">
+                <a href="join.html" class="login-link">
+                    <img src="sign-up_icon.png" alt="Sign Up">
+                    <span>JOIN</span>
+                </a>
+                <a href="login.html" class="login-link">
+                    <img src="join_icon.png" alt="Log In">
+                    <span>LOGIN</span>
+                </a>
+                <a href="Mypage.html" class="login-link">
+                    <img src="user_icon.png" alt="My Account">
+                    <span>MY</span>
+                </a>
+                <a href="like.html" class="login-link">
+                    <img src="heart_icon.png" alt="Like">
+                    <span>Like</span>
+                </a>
+            </div>
+        </div>
+        <nav class="menu-items">
+            <a href="women.html">WOMEN</a>
+            <a href="men.html">MEN</a>
+        </nav>
+    </header>
+    <style>
+        /* 팝업 스타일 */
+        .popup {
+            display: none; /* 기본적으로 숨김 */
+            position: fixed; /* 화면에 고정 */
+            top: 50%; /* 화면 중앙에 위치 */
+            left: 50%; /* 화면 중앙에 위치 */
+            transform: translate(-50%, -50%); /* 중앙으로 이동 */
+            background-color: white; /* 팝업 배경색 */
+            border: 2px solid #333; /* 경계선 */
+            padding: 20px; /* 내부 여백 */
+            z-index: 1000; /* 다른 요소 위에 나타나도록 */
+        }
+
+        /* 팝업 오버레이(배경) */
+        .popup-overlay {
+            display: none; /* 기본적으로 숨김 */
+            position: fixed; /* 화면에 고정 */
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            height: 100%; 
+            background: rgba(0, 0, 0, 0.5); /* 반투명 검정 배경 */
+            z-index: 999; /* 팝업 아래, 다른 요소 위 */
+        }
+    </style>
+    <script src="join.js"></script>
+</head>
+
+
+
+
+
+
+<body>
+   
+<form action="" method="post">
+    <div class="container">
+    <div class="insert">    
+        <table class="usertable">
+    <caption class="joinmember"><h2>JOIN MEMBER</h2></caption>
+
+    <tr>
+        <td class="col1">이메일<span class="redstar">*</span></td>
+        <td class="col2">
+            <input id="email" type="text" name="mailid" placeholder="이메일">
+            <span class="a">@</span>
+            <input id="optmailid" type="text" name="email" readonly>
+            <select id="selectcom" name="mailslc" onchange="undateEmailDomain()">
+                <option value="sel" selected>직접입력</option>
+                <option value="naver.com">naver.com</option>
+                <option value="gmail.com">gmail.com</option>
+                <option value="daum.com">daum.com</option>
+                <option value="yahoo.com">yahoo.com</option>
+            </select>
+            <input class='but2' type="button" value="이메일 중복확인" onclick="">
+        </td>
+    </tr>
+
+    <tr>
+        <td class="col1">비밀번호<span class="redstar">*</span></td>
+        <td class="col2">
+            <input id="pwd" type="password" name="pwd" placeholder="영문+숫자 조합 8~10자리" maxlength="10" oninput="passwords1()">
+            <span id="error-message"></span>
+        </td>
+    </tr>
+    
+    <tr>
+        <td class="col1">비밀번호 확인<span class="redstar">*</span></td>
+        <td class="col2">
+            <input id="pwdCheck" type="password" name="pwdCheck" maxlength="10" oninput="checkPasswords()">
+            <span id="passwordMessage"></span>
+        </td>
+        
+    </tr>
+    
+    <tr>
+       <td class="col1">이름<span class="redstar">*</span></td>
+       <td class="col2">
+         <input id="myname" type="text" name="name" placeholder="ex) 홍길동" maxlength="10">
+       </td>
+    </tr>
+    <tr>
+        <td class="col1">성별<span class="redstar">*</span></td>
+        <td>
+            <input type="radio" name="gender" value="male"> 남
+            <input type="radio" name="gender" value="female"> 여
+        </td>
+    </tr>
+    <tr>
+        <td class="col1">나이<span class="redstar">*</span></td>
+        <td class="col2">
+            <select id="age" name="age">
+                <option>선택</option>
+                <option>10~14세</option>
+                <option>15~19세</option>
+                <option>20~24세</option>
+                <option>25~29세</option>
+                <option>30~34세</option>
+                <option>35~39세</option>
+                <option>40~44세</option>
+                <option>45~49세</option>
+                <option>50~54세</option>
+                <option>55~59세</option>
+                <option>60세 이상</option>
+            </select>
+        </td>
+     </tr>
+     <tr>
+        <td class="col1">사이즈<span class="redstar">*</span></td>
+        <td class="col2">키
+          <input id="height" type="text" name="name" placeholder="ex) 167cm" maxlength="10">
+          몸무게
+            <input id="weight" type="text" name="name" placeholder="ex) 57kg" maxlength="10">
+            허리
+          <input id="waist" type="text" name="name" placeholder="ex) 27inch" maxlength="10">
+        </td>
+     </tr>
+  </table>
+  </div>
+  <div class="spacer1"></div> <!-- 세로 간격을 위한 요소 -->
+
+
+
+  <div class="agreement-form">
+    <p class="title"></p>
+
+    <table class="agreement-table"> <!-- 테이블로 변경 -->
+        <tr class="grey-background"> <!-- 전체 동의 -->
+            <td>
+                <label class="checkbox">
+                    <input type="checkbox" class="select-all">
+                    <span class="txt">모든 약관을 확인하고 전체 동의합니다.</span>
+                </label>
+            </td>
+        </tr>
+
+        <!-- 개별 동의 항목 -->
+        <tr> <!-- 14세 이상 동의 -->
+            <td>
+                <label class="checkbox">
+                    <input type="checkbox">
+                    <span class="txt">14세 이상입니다. (필수)</span>
+                </label>
+            </td>
+        </tr>
+
+        <tr> <!-- 이용약관 동의 -->
+            <td>
+                <label class="checkbox">
+                    <input type="checkbox">
+                    <span class="txt">이용약관 동의(필수)</span>
+                </label>
+                <button type="button" class="btn small outline2 thin" onclick="showPopup('popup1')">내용 보기</button> <!-- 버튼 -->
+            </td>
+        </tr>
+
+        <tr> <!-- 개인정보 수집 및 이용 동의 -->
+            <td>
+                <label class="checkbox">
+                    <input type="checkbox">
+                    <span class="txt">개인정보 수집 및 이용 동의(필수)</span>
+                </label>
+                <button type="button" class="btn small outline2 thin" onclick="showPopup('popup2')">내용 보기</button> <!-- 버튼 -->
+            </td>
+        </tr>
+
+        <tr> <!-- 개인정보 수집 및 이용안내 -->
+            <td>
+                <label class="checkbox">
+                    <input type="checkbox">
+                    <span class="txt">개인정보 수집 및 이용안내(선택)</span>
+                </label>
+                <button type="button" class="btn small outline2 thin" onclick="showPopup('popup3')">내용 보기</button> <!-- 버튼 -->
+            </td>
+        </tr>
+
+    </table> <!-- 테이블 끝 -->
+</div>
+
+
+<div class="spacer2"></div> <!-- 세로 간격을 위한 요소 -->
+<div class="create">
+    <input class="but3" type="button" value="취소" onclick="moveToMain()">
+    <input class="but4" type="button" value="확인">
+</div>
+
+
+<footer>
+    <div class="footer-info">
+        <div class="footer-Customer-Service">
+            <div class="help-info">
+                <span class="info_1">고객센터 : 1566-****<br></span>
+                <span class="info_2"> 09:00-18:00 / 점심시간 : 12:30-13:30<br></span>
+                <span class="info_2"><br>cs_help@.co.kr</span>
+            </div>
+        </div>
+        <div class="footer-button-box">
+            <a href="">
+                <img src="inquiry_button.png" alt="Inquiry">
+            </a>
+            <a href="">
+                <img src="FAQ_button.png" alt="FAQ">
+            </a>
+        </div>
+    </div>
+</footer>
+
+
+<!-- 팝업을 위한 오버레이 -->
+<div class="popup-overlay" onclick="hidePopup('popup1'); hidePopup('popup2');"></div>
+
+<!-- 첫 번째 팝업 -->
+<div class="popup" id="popup1">
+    <h3>이용약관 요약</h3>
+    <hr>
+<p><strong>목적:</strong> 이 약관은 서비스 이용과 관련된 규정을 제공합니다.</p>
+
+<p><strong>서비스 정의:</strong> "서비스"는 회사가 사이트를 통해 유료 또는 무료로 제공하는 행위 또는 물건을 의미합니다.</p>
+
+<p><strong>약관의 적용:</strong> 회사는 이 약관을 사이트의 초기 서비스화면에 게시하고, 관련법에 따라 개정할 수 있습니다.</p>
+
+<p><strong>회원의 권리 및 의무:</strong> 회원은 회사가 정한 가입양식에 따라 회원정보를 제공해야 하며, 회사는 회원의 개인정보 보호를 위한 보안 시스템을 갖추어야 합니다.</p>
+
+<p><strong>서비스 중단:</strong> 회사는 기술적 사유로 인해 서비스 제공이 일시 중단될 수 있으며, 이로 인한 손해는 회사의 고의나 과실이 없는 경우 면책됩니다.</p>
+
+<p><strong>구매계약 및 환급:</strong> 회사는 이용자가 구매 신청한 재화 등을 7일 이내에 배송해야 하며, 품절 등으로 인도할 수 없을 경우 지체 없이 환급해야 합니다.</p>
+
+<p><strong>청약철회:</strong> 이용자는 수신확인 통지를 받은 날부터 7일 이내에 청약철회가 가능합니다. 단, 재화의 멸실 또는 사용으로 인한 가치 감소 등은 제외됩니다.</p>
+
+<p><strong>개인정보 보호:</strong> 회사는 개인정보 수집 시 이용자의 동의를 받으며, 목적 외의 이용이나 제3자에게 제공할 수 없습니다.</p>
+
+<p><strong>분쟁 해결:</strong> 회사는 이용자가 제기하는 불만사항을 우선 처리하며, 전자상거래 분쟁은 관할 법원에서 해결합니다.</p>
+
+<p><strong>저작권 및 면책조항:</strong> 회사가 작성한 저작물에 대한 저작권은 회사에 귀속되며, 회원의 게시물에 대한 책임은 회원에게 있습니다.</p>
+
+    <button type="button" onclick="hidePopup('popup1')">닫기</button>
+</div>
+
+<!-- 두 번째 팝업 -->
+<div class="popup" id="popup2">
+    <h3>개인정보 수집 및 이용안내 (필수)</h3>
+    <hr>
+<p><strong>이용목적:</strong> 
+    가입 처리, 이용자 식별, 계약 이행, 서비스 제공, 문의∙상담∙불만∙민원처리, 부정이용 방지, 
+    상품∙옵션 추천, 구매 정보 제공, 서비스 이용 통계·분석, 상품‧서비스 개선.</p>
+
+<p><strong>수집항목:</strong> 
+    이메일 아이디, 이메일 주소, 성명, 비밀번호, 휴대폰 번호, 
+    서비스 사용 이력(클릭/구매/마이하트/장바구니), 이벤트 참여 여부, 성별, 나이, 생년.</p>
+
+<p><strong>보유 및 이용 기간:</strong> 
+    탈퇴 시 지체 없이 파기(이메일 아이디는 부정이용 방지 목적으로 탈퇴 후 30일 뒤 파기). 
+    법정 의무 보관 기간은 예외.</p>
+
+<p><strong>동의 거부 권리:</strong> 
+    동의를 거부할 권리가 있으나, 거부 시 회원가입이 불가할 수 있습니다.</p>
+
+    <button type="button" onclick="hidePopup('popup2')">닫기</button>
+</div>
+
+<!-- 세 번째 팝업 -->
+<div class="popup" id="popup3">
+    <h3>개인정보 수집 및 이용안내</h3>
+    <hr>
+        <p><strong>구분:</strong> 
+        서비스</p>
+        <p><strong>수집항목:</strong> 
+        휴대폰 번호</p>
+        <p><strong>이용목적:</strong>
+        앱 설치 URL 전송</p>
+        <p><strong>개인정보의 보유 및 이용 기간:</strong>
+        회원 탈퇴 시 30일 뒤 또는 법정 의무 보유기간</p>
+        <p>선택사항의 동의를 거부하시는 경우에도 회원가입 및 구매결제 등 필수서비스는 이용할 수 있습니다. <br>단, 일부 부가서비스는 제한될 수 있습니다.</p>
+    <button type="button" onclick="hidePopup('popup3')">닫기</button>
+</div>
+</body>
+</html>

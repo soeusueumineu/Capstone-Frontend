@@ -1,0 +1,369 @@
+body, html {
+    height: auto;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fff;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 50px;
+    margin-top: 20px;
+}
+
+.top-menu {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-menu a{
+    text-decoration: none;
+    color: black;
+}
+
+.top-menu span {
+    font-size: 24px;
+    font-family: Inter;
+}
+
+.login-link > img{
+    margin: 0;
+}
+
+.search-container{
+    margin-left: 50px;
+    display: table;
+}
+
+.search-child{
+    display: table-cell;
+    vertical-align: middle;
+    flex: none;
+}
+
+.search-bar {
+    width: 300px;
+    padding: 8px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+
+}
+
+.search-icon {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    align-self: center;
+    margin-left: 10px;
+}
+
+.menu-items {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    margin-top: 10px;
+}
+
+.menu-items a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: black;
+    font-family: Inter;
+}
+
+.login-area {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.login-area a {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    margin: 0 10px;
+    width: 40px;
+}
+
+.login-area img {
+    width: 28px;
+    height: 28px;
+    margin-bottom: 4px;
+}
+
+.login-area span {
+    font-size: medium;
+}
+
+.page-name{
+    text-align: center;
+    font-size: 300%;
+    font-weight: 100;
+    font-family: Inter;
+    color: gray;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.current-location{
+    text-align: center;
+    font-weight: 100;
+    font-family: Inter;
+    color: gray;
+    margin-top: 0;
+}
+
+
+.info_1{
+    font-size: 16px;
+}
+.info_2{
+    font-size: 12px;
+    color: gray;
+}
+
+
+footer {
+    flex-direction: row;
+    padding: 20px;
+}
+
+.footer-info {
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    width: 100%; 
+}
+
+.footer-Customer-Service{
+    width: 200px;
+    height: 80px;
+    position: absolute; 
+    margin-top: 10px;
+    left: 12%; 
+
+
+}
+
+.footer-button-box{
+    cursor: pointer;
+    width: 220px;
+    height: 55px;
+}
+
+.footer-button-box > a{
+    text-decoration: none;
+}
+
+.footer-button-box > a > img{
+    width: 93px;
+    height: 42px;
+    padding: 5px;
+}
+
+/*fittingroom*/
+.upload-section {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 400px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    
+}
+
+.upload-section p{
+    text-align: center;
+    font-size : 20px;
+    font-weight: bold;
+    color:#807a7a;
+  
+}
+
+.upload-section:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.upload {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.upload-box {
+    position: relative;
+}
+
+.upload-input {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.upload-button,
+.upload-action-button,
+.delete-button {
+    background-color: #f09292; 
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-left: 100px;
+}
+.delete-button{
+    margin-left:120px;
+}
+
+.upload-button:hover,
+.upload-action-button:hover,
+.delete-button:hover {
+    background-color: #fc6262;
+    transform: scale(1.05); 
+}
+
+.completed {
+    color: #ef7f7f; 
+    font-size: 14px;
+    font-style: italic;
+}
+
+.delete-button {
+    background-color: #ff6f61;
+}
+
+.delete-button:hover {
+    background-color: #ff3b2f;
+}
+
+.gotorecom {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.gofile-button {
+    background-color: #8299c3;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.recom-link {
+    color: white;
+    text-decoration: none;
+}
+
+.gofile-button:hover {
+    background-color: #4653b1;
+}
+
+.section {
+    padding-bottom: 10px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    width: 80%;
+    height: auto;
+    margin: auto;
+    padding-top: 20px;
+}
+
+.recomtitle h2{
+    margin-top: 50px;
+    text-align: center;
+    color:#777272;
+}
+
+.recomtitle p{
+    text-align: center;
+    font-size: 16px;
+}
+
+/* 모바일 : ~768px */
+/* 태블릿 : 768px ~ 1024px */
+/* 모니터 : 1024px~ */
+
+/* 갤럭시탭 S9 FE을 위한 미디어 쿼리 */
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* header 부분의 요소들에 대한 스타일링 */
+    .top-menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .top-menu .login-link img {
+        width: auto;
+    }
+
+    .search-container {
+        flex-grow: 1;
+        margin: 0 20px;
+    }
+
+
+    .search-bar {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .login-area {
+        display: flex;
+        gap: 10px;
+    }
+}
+
+
+@media (max-width: 820px){
+    .footer-Customer-Service {
+        display: none;
+    }
+}
+/* 더 작은 화면 크기에 대한 미디어 쿼리 */
+@media (max-width: 768px) {
+    .search-container, .login-area {
+        display: none; 
+    }
+
+    .top-menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .top-menu .login-link {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .top-menu .login-link img {
+        display: block;
+        margin: 0 auto;
+        height: auto;
+        max-height: 60px;
+        width: auto;
+    }
+}
+

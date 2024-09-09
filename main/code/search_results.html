@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <link rel="stylesheet" href="recommend.css">
+    <style>
+    .section {
+        padding-bottom: 10px;
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        width: 80%;
+        height: auto;
+        margin: auto;
+        padding-top: 20px;
+    }
+
+    .search-results-section {
+        margin-top: 50px;
+        background-color: #f8f9fa;
+        border: 1px solid #eee;
+        border-radius: 5px;
+        padding: 20px;
+        margin-bottom: 30%;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .search-results-title h2 {
+        margin-top: 50px;
+        text-align: center;
+        color: #777272;
+        width: 100%;
+    }
+
+    .search-results-title p {
+        text-align: center;
+        font-size: 16px;
+        width: 100%;
+    }
+
+    .item {
+        width: 25%;
+        padding: 10px;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    .search-results-section img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    .search-results-section h2 {
+        width: 100%;
+        overflow-wrap: break-word;
+        font-size: 18px;
+        margin-top: 10px;
+    }
+
+    .search-results-section p {
+        color: rgb(40, 39, 39);
+        font-size: 16px;
+        width: 100%;
+        overflow-wrap: break-word;
+        margin-top: 5px;
+    }
+    </style>
+</head>
+<body>
+    <div id="search-results" class="search-results"></div>
+
+    <script src="search.js"></script>
+</body>
+</html>
