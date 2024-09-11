@@ -10,7 +10,7 @@
 
 - 개발 기간
 
-      2024.03.22~ 06.07
+2024.03.22~ 06.07
 
 ## 🖥️ 개발 환경
 ![](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
