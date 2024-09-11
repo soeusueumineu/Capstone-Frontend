@@ -20,7 +20,7 @@
 
 ![](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)
 
-## 👥 팀원
+## 👥 프론트엔드 팀원
 - 김예원
 - 김준휘
 - 송인경
